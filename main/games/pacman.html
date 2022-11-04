@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Test</title>
+	<script src="https://kit.fontawesome.com/e1af60249d.js" crossorigin="anonymous">
+
+	</script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka One">
+	<link rel="icon" href="../icons/test.png">
+	<style>
+		html,
+		body {
+			height: 100%;
+			margin: 0;
+			text-align: center;
+		}
+
+		body {
+			background: black;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		canvas {
+			width: 50%;
+			height: 50%;
+            image-rendering: pixelated
+		}
+
+		input,
+		button {
+			border: 3px solid white;
+			background: #000080;
+			border-radius: 5px;
+			color: white;
+			height: 40px;
+			width: 140px;
+			cursor: pointer;
+			transition: .2s;
+			margin: 3px;
+			font-family: Fredoka One;
+			font-weight: 0px;
+			text-align: center;
+		}
+
+		input {
+			width: 130px;
+			height: 32px;
+		}
+
+		input:hover,
+		button:hover {
+			border: 4px solid white;
+			background: #0000ff;
+			font-weight: bolder;
+		}
+
+		p, span {
+			color: white;
+			font-family: Fredoka One;
+		}
+
+		.title {
+			font-size: 60px;
+			margin: 0;
+		}
+
+		::placeholder {
+			color: #ccc;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="start">
+		<p class="title">Pac Man</p><br>
+        <button class="start_but" id="solo"><i class="far fa-user"></i>&nbsp; Play</button><br>
+        <button id="leave_but"><i class="fas fa-sign-out-alt"></i>&nbsp; Exit</button>
+    </div>
+	<div hidden id="game">
+        <p style="color: white">
+            <span>Score: </span><span id="scoreEl"></span>
+            <span> Lives: </span><span id="liveEl"></span>
+            <span> Level: </span><span id="levelEl"></span>
+        </p>
+        <canvas width="760" height="880"id="canvas"></canvas>
+    </div>
+    <div hidden id="end">
+        <p style="color: white">
+            <p class="title">Game Over!</p>
+            <span>Score: </span><span id="endScore"></span>
+        </p>
+        <button id="but_back">Back</button>
+    </div>
+	<script src="pathfinder.js"></script>
+	<script src="pacman.js"></script>
+</body>
+
+</html>

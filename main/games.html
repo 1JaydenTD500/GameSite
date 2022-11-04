@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Games</title>
+	<script src="https://kit.fontawesome.com/e1af60249d.js" crossorigin="anonymous">
+
+	</script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka One">
+	<link rel="icon" href="icons/test.png">
+	<style>
+		html,
+		body {
+			height: 100%;
+			margin: 0;
+			text-align: center;
+		}
+
+		body {
+			background: #401080;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		canvas {
+			border: 6px solid white;
+		}
+
+		input,
+		button {
+			border: 3px solid white;
+			background: #400080;
+			border-radius: 5px;
+			color: white;
+			height: 40px;
+			width: 140px;
+			cursor: pointer;
+			transition: .2s;
+			margin: 3px;
+			font-family: Fredoka One;
+			font-weight: 0px;
+			text-align: center;
+		}
+
+		input {
+			width: 130px;
+			height: 32px;
+		}
+
+		input:hover,
+		button:hover {
+			border: 4px solid white;
+			background: #8000ff;
+			font-weight: bolder;
+		}
+
+		p {
+			color: white;
+			font-family: Fredoka One;
+		}
+
+		.title {
+			font-size: 45px;
+			margin: 0;
+		}
+
+		::placeholder {
+			color: #ccc;
+		}
+
+		.game {
+			border: 3px solid white;
+			background: #400080;
+			border-radius: 5px;
+			color: white;
+			height: 133px;
+			width: 133px;
+			cursor: pointer;
+			transition: .2s;
+			margin: 5px;
+			font-family: Fredoka One;
+			font-weight: 0px;
+			text-align: center;
+			line-height: 140px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.icon {
+			width: 133px;
+			height: 45px;
+			display: block;
+		}
+
+		.game:hover {
+			border: 4px solid white;
+			background: #8000ff;
+			font-weight: bolder;
+		}
+
+		.title {
+			width: 100%;
+			height: 83px;
+			flex-direction: row;
+			z-index: 7;
+			font-size: 100%
+		}
+
+		#games {
+			height: 100%;
+			width: 100%;
+			margin: auto;
+			justify-content: center;
+			display: flex;
+			flex-flow: row wrap;
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		<div id="games">
+			<div id="snake" class="game" role="button">
+				<div class="icon">
+					<img src="../icons/snake.png" width="133" height="133" alt="snake">
+			    </div>
+			<div class="title">Snake</div>
+		</div>
+		<div id="ttt" class="game" role="button">
+			<div class="icon">
+                <img src="../icons/tictactoe.png" width="133" height="133" alt="ttt">
+			    </div>
+			<div class="title">Tic Tac Toe</div>
+		</div>
+		<div id="tetris" class="game" role="button">
+			<div class="icon">
+                <img src="../icons/tetris.png" width="133" height="133" alt="tetris">
+			    </div>
+			<div class="title">Tetris</div>
+		</div>
+		<div id="2048" class="game" role="button">
+			<div class="icon">
+                <img src="../icons/2048.png" width="133" height="133" alt="2048">
+			    </div>
+			<div class="title">2048</div>
+		</div>
+		<div id="pacman" class="game" role="button">
+			<div class="icon">
+                <img src="../icons/test.png" width="133" height="133" alt="test">
+			    </div>
+			<div class="title">Pac Man</div>
+		</div>
+		<div id="test" class="game" role="button">
+			<div class="icon">
+                <img src="../icons/test.png" width="133" height="133" alt="test">
+			    </div>
+			<div class="title">Test</div>
+		</div>
+        </div>
+		<button id="exit">Exit</button>
+    </div>
+    <script src="../games.js"></script>
+</body>
+
+</html>
