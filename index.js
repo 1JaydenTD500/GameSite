@@ -1,7 +1,7 @@
 var express = require('express'),
     app = express(),
     serv = require('http').Server(app);
-app.get('/', (_, res) => res.sendFile(__dirname + '/main/index.html'));
+app.get('/', (_, res) => res.sendFile(__dirname + '/index.html'));
 app.get('/games', (_, res) => res.sendFile(__dirname + '/main/games.html'));
 
 ['2048', 'snake', 'test', 'tetris', 'tictactoe', 'pacman'].forEach(game => {
