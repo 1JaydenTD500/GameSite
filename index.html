@@ -79,9 +79,13 @@
 <body>
 	<div>
 		<p class="title">Games</p><br>
-        <button id="but_library">View Library</button>
+        <button onclick="openGames()" id="but_library">View Library</button>
     </div>
-    <script src="index.js"></script>
+<script>
+    function openGames() {
+        window.location = './games.html'
+    }
+</script>
 </body>
 
 </html>
